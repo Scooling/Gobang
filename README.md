@@ -1,8 +1,8 @@
-###利用Canvas和JavaScript实现五子棋
->主要技术：canvas绘制棋盘(UI)，JavaScript实现相关算法(AI)。在学习并实现五子棋功能的过程中，自己最初对算法不是特别了解，最后通过在纸上写写画画踩完了各处难点，终于完成了它的功能。感触颇多，故写篇文档分享。一来服务大众，二来加深自己理解。
+### 利用 Canvas 和 JavaScript 实现五子棋
+>主要技术：canvas 绘制棋盘(UI)，JavaScript 实现相关算法(AI)。在学习并实现五子棋功能的过程中，自己最初对算法不是特别了解，最后通过在纸上写写画画踩完了各处难点，终于完成了它的功能。感触颇多，故写篇文档分享。一来服务大众，二来加深自己理解。
 
-####一、canvas绘制棋盘(UI)和实现落子
-#####1.绘制棋盘
+#### 一、canvas绘制棋盘(UI)和实现落子
+##### 1.绘制棋盘
 这是在HTML中初始化canvas：
 ```javascript
 <canvas id="chess" width="450px" height="450px"></canvas>
@@ -72,7 +72,7 @@ logo.onload = function(){
 	drawChessBoard();//注意，绘制棋盘的函数要在添加背景图片之后调用，否则背景图片会遮盖住线条。
 }
 ```
-#####2.实现落子：
+##### 2.实现落子：
 ```javascript
 var over =false;
 //点击棋盘，触发该函数
@@ -110,8 +110,8 @@ chess.onclick = function(e){//注意，这里的e在下文中表示的是onclick
     }
 }
 ```
-####二、JavaScript实现相关逻辑算法
-#####1.赢法数组
+#### 二、JavaScript实现相关逻辑算法
+##### 1.赢法数组
 ```javascript
 	var wins = [];
 	for(var i=0; i<15; i++){
@@ -156,7 +156,7 @@ chess.onclick = function(e){//注意，这里的e在下文中表示的是onclick
 		}
 	}
 ```
-#####2.赢法统计数组
+##### 2.赢法统计数组
 >该部分注意结合上面的落子实现来读，在落子实现部分，onclick传入的i和j，就是这里未新定义的i和j。
 
 ```javascript
